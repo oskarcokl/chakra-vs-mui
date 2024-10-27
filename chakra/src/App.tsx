@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
-import { List } from "@chakra-ui/react"
+import { List, Theme, Center } from "@chakra-ui/react"
 import { Provider } from "./components/ui/provider";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -9,11 +9,17 @@ function App() {
     return (
         <BrowserRouter>
             <Provider>
-                <NavLinks/>
-                <Routes>
-                    <Route path="login" element={<Login/>}/>
-                    <Route path="register" element={<Register/>}/>
-                </Routes>
+                <Theme appearance="light">
+                    <Center axis="horziontal">
+                        <NavLinks/>
+                    </Center>
+                    <Center h="vh">
+                        <Routes>
+                            <Route path="login" element={<Login/>}/>
+                            <Route path="register" element={<Register/>}/>
+                        </Routes>
+                    </Center>
+                </Theme>
             </Provider>
         </BrowserRouter>
     );
