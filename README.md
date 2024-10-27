@@ -4,12 +4,12 @@ This is a simple project to test out how building different components works in 
 
 | Component                         | Chakra | MUI |
 |-----------------------------------|--------|-----|
-| Login form                        | [ ]    | [ ] |
-| Register form                     | [ ]    | [ ] |
-| Expense input form                | [ ]    | [ ] |
-| Confirmation modal                | [ ]    | [ ] |
-| Success toast                     | [ ]    | [ ] |
-| Responsive navbar                 | [ ]    | [ ] |
-| Table with sorting and pagination | [ ]    | [ ] |
+| Login form                        | ❌     | ❌  |
+| Register form                     | ❌     | ❌  |
+| Expense input form                | ❌     | ❌  |
+| Confirmation modal                | ❌     | ❌  |
+| Success toast                     | ❌     | ❌  |
+| Responsive navbar                 | ❌     | ❌  |
+| Table with sorting and pagination | ❌     | ❌  |
 
 
