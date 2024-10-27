@@ -31,5 +31,5 @@ export default function Login() {
                 </form>
             </Card.Body>
         </Card.Root>
-   )
+    )
 }
