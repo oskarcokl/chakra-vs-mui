@@ -4,6 +4,7 @@ import { List, Theme, Center, Card, Button, Box } from "@chakra-ui/react"
 import { Provider } from "./components/ui/provider";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import ExpenseInputForm from "./components/ExpenseInputForm";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                         <Routes>
                             <Route path="login" element={<Login/>}/>
                             <Route path="register" element={<Register/>}/>
+                            <Route path="expense-input-form" element={<ExpenseInputForm/>}/>
                         </Routes>
                     </Center>
                     <Center>
@@ -61,6 +63,9 @@ function NavLinks() {
                     </List.Item>
                     <List.Item>
                         <Link to="/register">Register</Link>
+                    </List.Item>
+                    <List.Item>
+                        <Link to="/expense-input-form">Expense Input Form</Link>
                     </List.Item>
                 </List.Root>
             </Card.Body>
