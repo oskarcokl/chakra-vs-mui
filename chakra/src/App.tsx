@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
-import { List, Theme, Center, Card, Button, Flex } from "@chakra-ui/react"
+import { List, Theme, Center, Card, Button, Box } from "@chakra-ui/react"
 import { Provider } from "./components/ui/provider";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -19,7 +19,9 @@ function App() {
                             <Route path="register" element={<Register/>}/>
                         </Routes>
                     </Center>
-                    <BackButton/>
+                    <Center>
+                        <BackButton/>
+                    </Center>
                 </Theme>
             </Provider>
         </BrowserRouter>
@@ -33,9 +35,9 @@ function BackButton() {
     return <>
         { !isRoot && (
             <Link to="/">
-                <Flex alignItems="flex-end" direction="column" w="vw" pr="10" pb="10">
+                <Box pb="10">
                     <Button>Back</Button>
-                </Flex>
+                </Box>
             </Link> 
         )}
     </>
