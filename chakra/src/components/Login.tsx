@@ -1,8 +1,6 @@
 import React from "react"
 import { useState } from "react"
-import { Stack, Input, Button, Card } from "@chakra-ui/react"
-import { Field } from "./ui/field"
-import { PasswordInput } from "./ui/password-input"
+import { Stack, Input, Button, Card, CardHeader, CardBody, Heading, Text, FormControl, FormLabel } from "@chakra-ui/react"
 
 export default function Login() {
     const [emailErrorMessage, setEmailErrorMessage] = useState("")
@@ -19,24 +17,26 @@ export default function Login() {
     }
 
     return (
-        <Card.Root w="sm">
-            <Card.Header>
-                <Card.Title>Login</Card.Title>
-                <Card.Description>Login with your email and password</Card.Description>
-            </Card.Header>
-            <Card.Body>
+        <Card w="sm">
+            <CardHeader>
+                <Heading>Login</Heading>
+                <Text>Login with your email and password</Text>
+            </CardHeader>
+            <CardBody>
                 <form onSubmit={loginHandler}>
                     <Stack gap="4" align="flex-end" maxW="sm">
-                        <Field label="Email" required invalid={emailErrorMessage !== ""} errorText={emailErrorMessage}>
-                            <Input name="email" placeholder="Enter your email"/>
-                        </Field>
-                        <Field label="Password" required>
-                            <PasswordInput name="password" placeholder="Enter your password"/>
-                        </Field>
+                        <FormControl isRequired>
+                            <FormLabel>Email</FormLabel>
+                            <Input name="email" type="email" placeholder="Enter your email"/>
+                        </FormControl>
+                        <FormControl isRequired>
+                            <FormLabel>Password</FormLabel>
+                            <Input type="password" name="password" placeholder="Enter your password"/>
+                        </FormControl>
                         <Button type="submit">Login</Button>
                     </Stack>
                 </form>
-            </Card.Body>
-        </Card.Root>
+            </CardBody>
+        </Card>
     )
 }

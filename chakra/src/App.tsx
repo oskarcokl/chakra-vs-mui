@@ -1,30 +1,26 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
-import { List, Theme, Center, Card, Button, Box } from "@chakra-ui/react"
-import { Provider } from "./components/ui/provider";
+import { List, ListItem, Center, Card, CardHeader, CardBody, Heading, Button, Box, ChakraProvider as Provider } from "@chakra-ui/react"
 import Login from "./components/Login";
 import Register from "./components/Register";
-import ExpenseInputForm from "./components/ExpenseInputForm";
+// import ExpenseInputForm from "./components/ExpenseInputForm";
 
 function App() {
     return (
         <BrowserRouter>
             <Provider>
-                <Theme appearance="light">
-                    <Center axis="horziontal" pt="10">
-                        <NavLinks/>
-                    </Center>
-                    <Center h="vh">
-                        <Routes>
-                            <Route path="login" element={<Login/>}/>
-                            <Route path="register" element={<Register/>}/>
-                            <Route path="expense-input-form" element={<ExpenseInputForm/>}/>
-                        </Routes>
-                    </Center>
-                    <Center>
-                        <BackButton/>
-                    </Center>
-                </Theme>
+                <Center axis="horziontal" pt="10">
+                    <NavLinks/>
+                </Center>
+                <Center h="vh">
+                    <Routes>
+                        <Route path="login" element={<Login/>}/>
+                        <Route path="register" element={<Register/>}/>
+                    </Routes>
+                </Center>
+                <Center>
+                    <BackButton/>
+                </Center>
             </Provider>
         </BrowserRouter>
     );
@@ -37,7 +33,7 @@ function BackButton() {
     return <>
         { !isRoot && (
             <Link to="/">
-                <Box pb="10">
+                <Box my="10">
                     <Button>Back</Button>
                 </Box>
             </Link> 
@@ -52,24 +48,24 @@ function NavLinks() {
     const isRoot = location.pathname === "/"
     
     return <>
-        { isRoot && ( <Card.Root size="lg">
-            <Card.Header>
-                <Card.Title>Components list</Card.Title>
-            </Card.Header>
-            <Card.Body>
-                <List.Root>
-                    <List.Item>
+        { isRoot && ( <Card size="lg">
+            <CardHeader>
+                <Heading>Components list</Heading>
+            </CardHeader>
+            <CardBody>
+                <List>
+                    <ListItem>
                         <Link to="/login">Login</Link>
-                    </List.Item>
-                    <List.Item>
+                    </ListItem>
+                   <ListItem>
                         <Link to="/register">Register</Link>
-                    </List.Item>
-                    <List.Item>
+                    </ListItem>
+                    <ListItem>
                         <Link to="/expense-input-form">Expense Input Form</Link>
-                    </List.Item>
-                </List.Root>
-            </Card.Body>
-        </Card.Root>
+                    </ListItem>
+                </List>
+            </CardBody>
+        </Card>
         )}
     </>
 }

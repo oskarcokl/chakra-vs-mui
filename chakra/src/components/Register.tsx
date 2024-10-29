@@ -1,7 +1,5 @@
 import React from "react"
-import { Stack, Input, Button, Card } from "@chakra-ui/react"
-import { Field } from "./ui/field"
-import { PasswordInput } from "./ui/password-input"
+import { Stack, Input, Button, Card, CardHeader, CardBody, Text, Heading, FormLabel, FormControl } from "@chakra-ui/react"
 
 export default function Register() {
     function loginHandler(e: React.FormEvent<HTMLFormElement>) {
@@ -12,33 +10,38 @@ export default function Register() {
     }
 
     return (
-        <Card.Root w="sm">
-            <Card.Header>
-                <Card.Title>Register</Card.Title>
-                <Card.Description>Fill out the information bellow to create an account.</Card.Description>
-            </Card.Header>
-            <Card.Body>
+        <Card w="sm">
+            <CardHeader>
+                <Heading>Register</Heading>
+                <Text>Fill out the information bellow to create an account.</Text>
+            </CardHeader>
+            <CardBody>
                 <form onSubmit={loginHandler}>
                     <Stack gap="4" align="flex-end" maxW="sm">
-                        <Field label="First Name">
+                        <FormControl isRequired>
+                            <FormLabel>First Name</FormLabel>
                             <Input name="first-name" placeholder="Enter your first name"/>
-                        </Field>
-                        <Field label="Last Name">
+                        </FormControl>
+                        <FormControl isRequired>
+                            <FormLabel>Last Name</FormLabel>
                             <Input name="last-name" placeholder="Enter your last name"/>
-                        </Field>
-                        <Field label="Email">
-                            <Input name="email" placeholder="Enter your email"/>
-                        </Field>
-                        <Field label="Password">
-                            <PasswordInput name="password" placeholder="Enter your password"/>
-                        </Field>
-                        <Field label="Repeat Password">
-                            <PasswordInput name="re-password" placeholder="Enter your password again :)"/>
-                        </Field>
+                        </FormControl>
+                        <FormControl isRequired>
+                            <FormLabel>Email</FormLabel>
+                            <Input name="email" type="email" placeholder="Enter your email"/>
+                        </FormControl>
+                        <FormControl isRequired>
+                            <FormLabel>Password</FormLabel>
+                            <Input type="password" name="password" placeholder="Enter your password"/>
+                        </FormControl>
+                        <FormControl isRequired>
+                            <FormLabel>Repeat Password</FormLabel>
+                            <Input type="password" name="re-password" placeholder="Enter your password again :)"/>
+                        </FormControl>
                         <Button type="submit">Register</Button>
                     </Stack>
                 </form>
-            </Card.Body>
-        </Card.Root>
+            </CardBody>
+        </Card>
     )
 }
