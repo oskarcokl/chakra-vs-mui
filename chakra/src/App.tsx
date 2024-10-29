@@ -4,6 +4,7 @@ import { List, ListItem, Center, Heading, Button, Box, ChakraProvider as Provide
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ExpenseInputForm from "./components/ExpenseInputForm";
+import ModalExample from "./components/ModalExample";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                         <Route path="login" element={<Login/>}/>
                         <Route path="register" element={<Register/>}/>
                         <Route path="expense-input-form" element={<ExpenseInputForm/>}/>
+                        <Route path="modal-example" element={<ModalExample/>}/>
                     </Routes>
                 </Center>
                 <Center>
@@ -60,6 +62,9 @@ function NavLinks() {
                 </ListItem>
                 <ListItem>
                     <Link to="/expense-input-form">Expense Input Form</Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="/modal-example">Modal Example</Link>
                 </ListItem>
             </List>
         </Box>
