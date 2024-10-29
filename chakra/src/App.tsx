@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-do
 import { List, ListItem, Center, Card, CardHeader, CardBody, Heading, Button, Box, ChakraProvider as Provider } from "@chakra-ui/react"
 import Login from "./components/Login";
 import Register from "./components/Register";
-// import ExpenseInputForm from "./components/ExpenseInputForm";
+import ExpenseInputForm from "./components/ExpenseInputForm";
 
 function App() {
     return (
@@ -16,6 +16,7 @@ function App() {
                     <Routes>
                         <Route path="login" element={<Login/>}/>
                         <Route path="register" element={<Register/>}/>
+                        <Route path="expense-input-form" element={<ExpenseInputForm/>}/>
                     </Routes>
                 </Center>
                 <Center>
