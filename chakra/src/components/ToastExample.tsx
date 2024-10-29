@@ -2,16 +2,34 @@ import React from "react";
 import { useToast, HStack, Button } from "@chakra-ui/react";
 
 export default function ToastExample() {
+    const toast = useToast();
+
     const onSuccess = () => {
-        console.log("success");
+        toast({
+            title: "Success",
+            status: "success",
+            duration: 1000,
+            isClosable: true
+        })
     }
 
     const onError = () => {
-        console.log("error");
+        toast({
+            title: "Error",
+            status: "error",
+            duration: 1000,
+            isClosable: true
+        })
     }
 
     const onInfo = () => {
-        console.log("info");
+        toast({
+            title: "Info",
+            status: "info",
+            duration: 1000,
+            isClosable: true
+        })
+
     }
 
     return (<>
