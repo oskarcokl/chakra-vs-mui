@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
-import { List, ListItem, Center, Card, CardHeader, CardBody, Heading, Button, Box, ChakraProvider as Provider } from "@chakra-ui/react"
+import { List, ListItem, Center, Heading, Button, Box, ChakraProvider as Provider } from "@chakra-ui/react"
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ExpenseInputForm from "./components/ExpenseInputForm";
