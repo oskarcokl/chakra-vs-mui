@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ExpenseInputForm from "./components/ExpenseInputForm";
 import ModalExample from "./components/ModalExample";
+import ToastExample from "./components/ToastExample";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                         <Route path="register" element={<Register/>}/>
                         <Route path="expense-input-form" element={<ExpenseInputForm/>}/>
                         <Route path="modal-example" element={<ModalExample/>}/>
+                        <Route path="toast-example" element={<ToastExample/>}/>
                     </Routes>
                 </Center>
                 <Center>
@@ -65,6 +67,9 @@ function NavLinks() {
                 </ListItem>
                 <ListItem>
                     <Link to="/modal-example">Modal Example</Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="/toast-example">Toast Example</Link>
                 </ListItem>
             </List>
         </Box>
