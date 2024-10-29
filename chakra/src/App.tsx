@@ -9,7 +9,7 @@ function App() {
     return (
         <BrowserRouter>
             <Provider>
-                <Center axis="horziontal" pt="10">
+                <Center axis="horziontal" mt="10">
                     <NavLinks/>
                 </Center>
                 <Center h="vh">
@@ -49,24 +49,20 @@ function NavLinks() {
     const isRoot = location.pathname === "/"
     
     return <>
-        { isRoot && ( <Card size="lg">
-            <CardHeader>
-                <Heading>Components list</Heading>
-            </CardHeader>
-            <CardBody>
-                <List>
-                    <ListItem>
-                        <Link to="/login">Login</Link>
-                    </ListItem>
-                   <ListItem>
-                        <Link to="/register">Register</Link>
-                    </ListItem>
-                    <ListItem>
-                        <Link to="/expense-input-form">Expense Input Form</Link>
-                    </ListItem>
-                </List>
-            </CardBody>
-        </Card>
+        { isRoot && ( <Box w="sm">
+            <Heading textAlign="center">Components list</Heading>
+            <List>
+                <ListItem>
+                    <Link to="/login">Login</Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="/register">Register</Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="/expense-input-form">Expense Input Form</Link>
+                </ListItem>
+            </List>
+        </Box>
         )}
     </>
 }
