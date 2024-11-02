@@ -10,7 +10,7 @@ both of these UI libraries.
 | Expense input form                |   ✅   |  ❌  |
 | Confirmation modal                |   ✅   |  ❌  |
 | Success toast                     |   ✅   |  ❌  |
-| Responsive navbar                 |   ❌   |  ❌  |
+| Responsive navbar                 |   ✅   |  ❌  |
 | Table with sorting and pagination |   ❌   |  ❌  |
 
 
