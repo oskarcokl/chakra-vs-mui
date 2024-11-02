@@ -69,7 +69,7 @@ const SidebarContent = ({ isCollapsed, onToggle }: SidebarContentProps) => {
         >
             <Flex px={4} align="center" mb={8}>
                 {!isCollapsed && (
-                    <Text fontSize="xl" fontWeight="bold" color="blue.500">
+                    <Text fontSize="xl" fontWeight="bold">
                         Plutus
                     </Text>
                 )}
