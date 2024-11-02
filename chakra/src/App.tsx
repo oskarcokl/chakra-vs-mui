@@ -6,12 +6,13 @@ import Register from "./components/Register";
 import ExpenseInputForm from "./components/ExpenseInputForm";
 import ModalExample from "./components/ModalExample";
 import ToastExample from "./components/ToastExample";
+import SidebarExample from "./components/SidebarExample";
 
 function App() {
     return (
         <BrowserRouter>
             <Provider>
-                <Center axis="horziontal" mt="10">
+                <Center mt="10">
                     <NavLinks/>
                 </Center>
                 <Center h="vh">
@@ -21,6 +22,7 @@ function App() {
                         <Route path="expense-input-form" element={<ExpenseInputForm/>}/>
                         <Route path="modal-example" element={<ModalExample/>}/>
                         <Route path="toast-example" element={<ToastExample/>}/>
+                        <Route path="sidebar-example" element={<SidebarExample/>}/>
                     </Routes>
                 </Center>
                 <Center>
@@ -70,6 +72,9 @@ function NavLinks() {
                 </ListItem>
                 <ListItem>
                     <Link to="/toast-example">Toast Example</Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="/sidebar-example">Sidebar Example</Link>
                 </ListItem>
             </List>
         </Box>
