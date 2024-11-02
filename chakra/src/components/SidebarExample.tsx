@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
-import { Box, Card, Flex, Heading } from "@chakra-ui/react";
+import { Box, Card, Heading, useMediaQuery } from "@chakra-ui/react";
 
 export default function SidebarExample() {
+    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [isMobile] = useMediaQuery('(max-width: 768px)');
+
+    const boxMargin = isMobile ? "0" : (isCollapsed ? "10" : "240");
+
     return (
         <Box w="full">
-            <Sidebar/>
-            <Box flex="1" p="4" ml="240" transition="margin 0.2s">
+            <Sidebar
+                isCollapsed={isCollapsed}
+                onCollapsedChange={setIsCollapsed}
+            />
+            <Box flex="1" p="4" ml={boxMargin} transition="margin 0.2s">
                 <Card p="6">
                     <Heading>
                         This is some example content
@@ -28,11 +36,3 @@ export default function SidebarExample() {
         </Box>
     )
 }
-
-// export default function SidebarExample() {
-//     return (
-//         <Flex w="full" h="100vh">
-//             <Sidebar/>
-//         </Flex>
-//     )
-// }

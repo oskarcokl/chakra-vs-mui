@@ -109,8 +109,18 @@ const SidebarContent = ({ isCollapsed, onToggle }: SidebarContentProps) => {
     );
 };
 
-const Sidebar = () => {
-    const [isCollapsed, setIsCollapsed] = useState(false);
+interface SidebarProps {
+    isCollapsed?: boolean,
+    onCollapsedChange?: (isCollapsed: boolean) => void;
+}
+
+const Sidebar = ({isCollapsed: controlledIsCollapsed, onCollapsedChange}: SidebarProps) => {
+    const [internalIsCollapsed, setIinternalIsCollapsed] = useState(false);
+
+
+    const isCollapsed = controlledIsCollapsed ?? internalIsCollapsed;
+    const setIsCollapsed = onCollapsedChange ?? setIinternalIsCollapsed;
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [isMobile] = useMediaQuery('(max-width: 768px)');
 
@@ -125,6 +135,7 @@ const Sidebar = () => {
                         size="sm"
                         onClick={onOpen}
                         aria-label="Open menu"
+                        zIndex={2}
                     >
                         Menu
                     </Button>
