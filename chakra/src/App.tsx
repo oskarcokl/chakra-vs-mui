@@ -7,6 +7,8 @@ import ExpenseInputForm from "./components/ExpenseInputForm";
 import ModalExample from "./components/ModalExample";
 import ToastExample from "./components/ToastExample";
 import SidebarExample from "./components/SidebarExample";
+import SortableTable from "./components/SortableTable";
+import { tableData } from "./data/tableData";
 
 function App() {
     return (
@@ -23,6 +25,7 @@ function App() {
                         <Route path="modal-example" element={<ModalExample/>}/>
                         <Route path="toast-example" element={<ToastExample/>}/>
                         <Route path="sidebar-example" element={<SidebarExample/>}/>
+                        <Route path="sortable-table" element={<SortableTable data={tableData}/>}/>
                     </Routes>
                 </Center>
                 <Center>
@@ -43,7 +46,7 @@ function BackButton() {
                 <Box my="10">
                     <Button>Back</Button>
                 </Box>
-            </Link> 
+            </Link>
         )}
     </>
     }
@@ -53,7 +56,7 @@ function NavLinks() {
     // what I'm doing.
     const location = useLocation();
     const isRoot = location.pathname === "/"
-    
+
     return <>
         { isRoot && ( <Box w="sm">
             <Heading textAlign="center">Components list</Heading>
@@ -75,6 +78,9 @@ function NavLinks() {
                 </ListItem>
                 <ListItem>
                     <Link to="/sidebar-example">Sidebar Example</Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="/sortable-table">Sortable Table</Link>
                 </ListItem>
             </List>
         </Box>
