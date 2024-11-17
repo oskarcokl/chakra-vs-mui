@@ -10,6 +10,9 @@ export default function ComponentsList() {
                   <ListItem>
                       <Link to="/login">Login</Link>
                   </ListItem>
+                  <ListItem>
+                      <Link to="/register">Register</Link>
+                  </ListItem>
               </List>
           </Stack>
       </>
