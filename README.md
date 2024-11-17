@@ -6,7 +6,7 @@ both of these UI libraries.
 | Component                         | Chakra | MUI  |
 |-----------------------------------|--------|------|
 | Login form                        |   ✅   |  ✅  |
-| Register form                     |   ✅   |  ❌  |
+| Register form                     |   ✅   |  ✅  |
 | Expense input form                |   ✅   |  ❌  |
 | Confirmation modal                |   ✅   |  ❌  |
 | Success toast                     |   ✅   |  ❌  |
