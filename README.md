@@ -7,7 +7,7 @@ both of these UI libraries.
 |-----------------------------------|--------|------|
 | Login form                        |   ✅   |  ✅  |
 | Register form                     |   ✅   |  ✅  |
-| Expense input form                |   ✅   |  ❌  |
+| Expense input form                |   ✅   |  ✅  |
 | Confirmation modal                |   ✅   |  ❌  |
 | Success toast                     |   ✅   |  ❌  |
 | Responsive navbar                 |   ✅   |  ❌  |
