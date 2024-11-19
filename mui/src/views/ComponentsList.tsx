@@ -13,6 +13,9 @@ export default function ComponentsList() {
                   <ListItem>
                       <Link to="/register">Register</Link>
                   </ListItem>
+                  <ListItem>
+                      <Link to="/expense-input-form">Expense Input Form</Link>
+                  </ListItem>
               </List>
           </Stack>
       </>
