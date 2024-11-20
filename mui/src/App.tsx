@@ -9,6 +9,7 @@ import ExpenseInputForm from './components/ExpenseInputForm';
 import ConfirmationModal from './components/ConfirmationModal';
 import ToastExample from './components/ToastExample';
 import Navbar from './components/Navbar';
+import DataTable from './components/DataTable';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/confirmation-modal" element={<ConfirmationModal />} />
         <Route path="/toast-example" element={<ToastExample />} />
         <Route path="/navbar" element={<Navbar />} />
+        <Route path="/data-table" element={<DataTable />} />
       </Routes>
       <Box mt={4} display="flex" justifyContent="center">
         <BackButton />

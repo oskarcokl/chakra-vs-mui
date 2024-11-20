@@ -25,6 +25,9 @@ export default function ComponentsList() {
                   <ListItem>
                       <Link to="/navbar">Navbar</Link>
                   </ListItem>
+                  <ListItem>
+                      <Link to="/data-table">Data Table</Link>
+                  </ListItem>
               </List>
           </Stack>
       </>
