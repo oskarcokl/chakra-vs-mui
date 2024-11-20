@@ -10,24 +10,25 @@ import ConfirmationModal from './components/ConfirmationModal';
 import ToastExample from './components/ToastExample';
 import Navbar from './components/Navbar';
 import DataTable from './components/DataTable';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<ComponentsList />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/expense-input-form" element={<ExpenseInputForm />} />
-        <Route path="/confirmation-modal" element={<ConfirmationModal />} />
-        <Route path="/toast-example" element={<ToastExample />} />
-        <Route path="/navbar" element={<Navbar />} />
-        <Route path="/data-table" element={<DataTable />} />
-      </Routes>
-      <Box mt={4} display="flex" justifyContent="center">
-        <BackButton />
-      </Box>
-    </Router>
+      <Router>
+          <Routes>
+              <Route path="/" element={<ComponentsList />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/expense-input-form" element={<ExpenseInputForm />} />
+              <Route path="/confirmation-modal" element={<ConfirmationModal />} />
+              <Route path="/toast-example" element={<ToastExample />} />
+              <Route path="/navbar" element={<Navbar />} />
+              <Route path="/data-table" element={<DataTable />} />
+          </Routes>
+          <Box mt={4} display="flex" justifyContent="center">
+              <BackButton />
+          </Box>
+      </Router>
   );
 }
 
