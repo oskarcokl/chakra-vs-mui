@@ -22,6 +22,9 @@ export default function ComponentsList() {
                   <ListItem>
                       <Link to="/toast-example">Toast Example</Link>
                   </ListItem>
+                  <ListItem>
+                      <Link to="/navbar">Navbar</Link>
+                  </ListItem>
               </List>
           </Stack>
       </>

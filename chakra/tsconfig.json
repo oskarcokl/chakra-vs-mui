@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../mui/src/components/ConfirmationModal.tsx"  ]
 }
