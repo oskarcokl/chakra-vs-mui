@@ -16,6 +16,9 @@ export default function ComponentsList() {
                   <ListItem>
                       <Link to="/expense-input-form">Expense Input Form</Link>
                   </ListItem>
+                  <ListItem>
+                      <Link to="/confirmation-modal">Confirmation Modal</Link>
+                  </ListItem>
               </List>
           </Stack>
       </>
