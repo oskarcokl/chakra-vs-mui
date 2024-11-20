@@ -8,8 +8,8 @@ both of these UI libraries.
 | Login form                        |   ✅   |  ✅  |
 | Register form                     |   ✅   |  ✅  |
 | Expense input form                |   ✅   |  ✅  |
-| Confirmation modal                |   ✅   |  ❌  |
-| Success toast                     |   ✅   |  ❌  |
+| Confirmation modal                |   ✅   |  ✅  |
+| Success toast                     |   ✅   |  ✅  |
 | Responsive navbar                 |   ✅   |  ❌  |
 | Table with sorting and pagination |   ✅   |  ❌  |
 
