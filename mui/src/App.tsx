@@ -7,6 +7,7 @@ import BackButton from './components/BackButton';
 import Register from './components/Register';
 import ExpenseInputForm from './components/ExpenseInputForm';
 import ConfirmationModal from './components/ConfirmationModal';
+import ToastExample from './components/ToastExample';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/expense-input-form" element={<ExpenseInputForm />} />
         <Route path="/confirmation-modal" element={<ConfirmationModal />} />
+        <Route path="/toast-example" element={<ToastExample />} />
       </Routes>
       <Box mt={4} display="flex" justifyContent="center">
         <BackButton />

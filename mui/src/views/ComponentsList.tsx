@@ -19,6 +19,9 @@ export default function ComponentsList() {
                   <ListItem>
                       <Link to="/confirmation-modal">Confirmation Modal</Link>
                   </ListItem>
+                  <ListItem>
+                      <Link to="/toast-example">Toast Example</Link>
+                  </ListItem>
               </List>
           </Stack>
       </>
