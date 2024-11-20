@@ -6,6 +6,8 @@ import { Box } from '@mui/material';
 import BackButton from './components/BackButton';
 import Register from './components/Register';
 import ExpenseInputForm from './components/ExpenseInputForm';
+import ConfirmationModal from './components/ConfirmationModal';
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/expense-input-form" element={<ExpenseInputForm />} />
+        <Route path="/confirmation-modal" element={<ConfirmationModal />} />
       </Routes>
       <Box mt={4} display="flex" justifyContent="center">
         <BackButton />
