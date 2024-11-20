@@ -11,7 +11,7 @@ both of these UI libraries.
 | Confirmation modal                |   ✅   |  ✅  |
 | Success toast                     |   ✅   |  ✅  |
 | Responsive navbar                 |   ✅   |  ✅  |
-| Table with sorting and pagination |   ✅   |  ❌  |
+| Table with sorting and pagination |   ✅   |  ✅  |
 
 
 # Comparison
